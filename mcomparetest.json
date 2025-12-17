@@ -1,0 +1,625 @@
+{
+  "id": "77279d0d-8d45-47f8-be26-7189c9de7d3c",
+  "revision": 0,
+  "last_node_id": 43,
+  "last_link_id": 130,
+  "nodes": [
+    {
+      "id": 7,
+      "type": "CLIPTextEncode",
+      "pos": [
+        1578.7716699274563,
+        -63.93203967355068
+      ],
+      "size": [
+        400,
+        205
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 126
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            122
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.77",
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "1girl, chen bin, yoneyama mai, [as109, fkey], [sweetonedollar], agm, full body, white hair, albino, makeup, blush, eyeshadow, pink choker, colored eyelashes, hair between eyes, hair over eyes, sidelocks, low-tied long hair, hair over shoulder, long hair, messy hair, pale skin, red eyes, standing, long legs, detailed eyes, white pants, yoga pants, tight pants, cropped sweater, white sweater, single off shoulder, simple background, black background, white theme, chiaroscuro, best quality, masterpiece, very awa, absurdres"
+      ]
+    },
+    {
+      "id": 12,
+      "type": "BetaSchedulerV2C",
+      "pos": [
+        2072.0359316055155,
+        483.96924125092784
+      ],
+      "size": [
+        270,
+        153.33333333333334
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "sigmas",
+          "type": "SIGMAS",
+          "links": []
+        }
+      ],
+      "properties": {
+        "aux_id": "Enferlain/ComfyUI-extra-schedulers",
+        "ver": "f955c5862aa97e2c19a920a2c6eba59343905231",
+        "Node name for S&R": "BetaSchedulerV2C"
+      },
+      "widgets_values": [
+        28,
+        0.6,
+        0.6,
+        1
+      ]
+    },
+    {
+      "id": 10,
+      "type": "SamplerRES_Momentumized_v4",
+      "pos": [
+        2056.5130029352686,
+        210.79165112234767
+      ],
+      "size": [
+        306.875,
+        210
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "SAMPLER",
+          "type": "SAMPLER",
+          "links": [
+            120
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI-Extra-Samplers",
+        "ver": "6dd814803a42eec77501d0f73d22d061adb59e46",
+        "Node name for S&R": "SamplerRES_Momentumized_v4"
+      },
+      "widgets_values": [
+        "gaussian",
+        0,
+        "cosine",
+        true,
+        0,
+        0.5
+      ]
+    },
+    {
+      "id": 8,
+      "type": "CLIPTextEncode",
+      "pos": [
+        1579.5208435114425,
+        186.88166243419633
+      ],
+      "size": [
+        400,
+        205
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 127
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            121
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.77",
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "worst quality, low quality, lowres, artist name, pubic hair, signature, bad anatomy, large breasts"
+      ]
+    },
+    {
+      "id": 13,
+      "type": "EmptyLatentImage",
+      "pos": [
+        2074.597028000373,
+        19.085941893832132
+      ],
+      "size": [
+        270,
+        125
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            123
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.77",
+        "Node name for S&R": "EmptyLatentImage"
+      },
+      "widgets_values": [
+        1024,
+        1536,
+        1
+      ]
+    },
+    {
+      "id": 34,
+      "type": "AddReflectionToVAE",
+      "pos": [
+        2105.5199258144808,
+        -78.07034026129111
+      ],
+      "size": [
+        207.80000000000018,
+        30
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 109
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            124
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-vae-reflection",
+        "ver": "31903567117dccff29df914f2ff7b93fd1255e6e",
+        "Node name for S&R": "AddReflectionToVAE"
+      },
+      "widgets_values": [],
+      "shape": 1
+    },
+    {
+      "id": 14,
+      "type": "SaveImage",
+      "pos": [
+        3138.507539393017,
+        -81.91560139922068
+      ],
+      "size": [
+        639.0885416666667,
+        1011.3541666666667
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 125
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.77"
+      },
+      "widgets_values": [
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 41,
+      "type": "ModelComparisoner",
+      "pos": [
+        2528.728614424308,
+        62.09573070332482
+      ],
+      "size": [
+        513.8500000000008,
+        660
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 122
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 121
+        },
+        {
+          "name": "sampler",
+          "type": "SAMPLER",
+          "link": 120
+        },
+        {
+          "name": "sigmas",
+          "type": "SIGMAS",
+          "link": 119
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 123
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": 124
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            125
+          ]
+        },
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "Enferlain/ComfyUI-Model-Comparison",
+        "ver": "3186ad8f563ef7af105921c84a1ec0d98a726a05",
+        "Node name for S&R": "ModelComparisoner"
+      },
+      "widgets_values": [
+        "pop3b7vae-NoobAI-RF-v0.2-Base-pop_lora-it_3_merged.safetensors\npop3b7vae-NoobAI-RF-v0.2-Base-pop_lora-it_10_merged.safetensors\npop3b7vae-NoobAI-RF-v0.2-Base-pop_lora-it_47_merged.safetensors\npop3b7vae-NoobAI-RF-v0.2-Base-pop_lora-it_96_merged.safetensors\npop3b7vae-NoobAI-RF-v0.2-Base-pop_lora-it_97_merged.safetensors\npop3b7vae-NoobAI-RF-v0.2-Base-pop_lora-it_112_merged.safetensors\npop3b7vae-NoobAI-RF-v0.2-Base-pop_lora-it_107_merged.safetensors\npop3b7vae-NoobAI-RF-v0.2-Base-pop_lora-it_108_merged.safetensors\npop3b7vae-NoobAI-RF-v0.2-Base-pop_lora-it_109_merged.safetensors\npop3b7vae-NoobAI-RF-v0.2-Base-pop_lora-it_113_merged.safetensors\npop3b7vae-NoobAI-RF-v0.2-Base-pop_lora-it_114_merged.safetensors\npop3b7vae-NoobAI-RF-v0.2-Base-pop_lora-it_115_merged.safetensors\npop3b7vae-NoobAI-RF-v0.2-Base-pop_lora-it_122_merged.safetensors\npop3b7vae-NoobAI-RF-v0.2-Base-pop_lora-it_133_merged.safetensors\npop3b7vae-NoobAI-RF-v0.2-Base-pop_lora-it_142_merged.safetensors\npop3b7vae-NoobAI-RF-v0.2-Base-pop_lora-it_174_merged.safetensors\npop3b7vae-NoobAI-RF-v0.2-Base-pop_lora-it_184_merged.safetensors\npop3b7vae-NoobAI-RF-v0.2-Base-pop_lora-it_184_merged.safetensors\npop3b7vae-NoobAI-RF-v0.2-Base-pop_lora-it_213_merged.safetensors\npop3b7vae-NoobAI-RF-v0.2-Base-pop_lora-it_234_merged.safetensors\npop3b7vae-NoobAI-RF-v0.2-Base-pop_lora-it_307_merged.safetensors\npop3b7vae-NoobAI-RF-v0.2-Base-pop_lora-it_323_merged.safetensors\npop3b7vae-NoobAI-RF-v0.2-Base-pop_lora-it_325_merged.safetensors\n",
+        5.2,
+        true,
+        69,
+        "fixed",
+        "sd3",
+        false,
+        2.5,
+        50,
+        "grid",
+        "batch",
+        50
+      ]
+    },
+    {
+      "id": 36,
+      "type": "VAELoader",
+      "pos": [
+        1217.310762490753,
+        177.06561815287657
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            109
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.4.0",
+        "Node name for S&R": "VAELoader"
+      },
+      "widgets_values": [
+        "Pad_EQB7_DecB2.safetensors"
+      ]
+    },
+    {
+      "id": 39,
+      "type": "BetaSchedulerV3",
+      "pos": [
+        2076.6966809676,
+        714.469847672028
+      ],
+      "size": [
+        270,
+        154
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 130
+        }
+      ],
+      "outputs": [
+        {
+          "name": "sigmas",
+          "type": "SIGMAS",
+          "links": [
+            119
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "Enferlain/ComfyUI-extra-schedulers",
+        "ver": "914b1deae44251b302cc4203e6a94bed7eae6cdd",
+        "Node name for S&R": "BetaSchedulerV3"
+      },
+      "widgets_values": [
+        28,
+        0.6,
+        0.6,
+        "normal",
+        1
+      ]
+    },
+    {
+      "id": 42,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        1221.035964424305,
+        7.881680703324022
+      ],
+      "size": [
+        270,
+        98
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            129
+          ]
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            126,
+            127
+          ]
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.4.0",
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "pop3b7vae-NoobAI-RF-v0.2-Base-pop_lora-it_3_merged.safetensors"
+      ]
+    },
+    {
+      "id": 43,
+      "type": "ModelSamplingSD3",
+      "pos": [
+        1619.2711644243084,
+        482.25008070332456
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 129
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            130
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.4.0",
+        "Node name for S&R": "ModelSamplingSD3"
+      },
+      "widgets_values": [
+        2.5
+      ]
+    }
+  ],
+  "links": [
+    [
+      109,
+      36,
+      0,
+      34,
+      0,
+      "VAE"
+    ],
+    [
+      119,
+      39,
+      0,
+      41,
+      3,
+      "SIGMAS"
+    ],
+    [
+      120,
+      10,
+      0,
+      41,
+      2,
+      "SAMPLER"
+    ],
+    [
+      121,
+      8,
+      0,
+      41,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      122,
+      7,
+      0,
+      41,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      123,
+      13,
+      0,
+      41,
+      4,
+      "LATENT"
+    ],
+    [
+      124,
+      34,
+      0,
+      41,
+      5,
+      "VAE"
+    ],
+    [
+      125,
+      41,
+      0,
+      14,
+      0,
+      "IMAGE"
+    ],
+    [
+      126,
+      42,
+      1,
+      7,
+      0,
+      "CLIP"
+    ],
+    [
+      127,
+      42,
+      1,
+      8,
+      0,
+      "CLIP"
+    ],
+    [
+      129,
+      42,
+      0,
+      43,
+      0,
+      "MODEL"
+    ],
+    [
+      130,
+      43,
+      0,
+      39,
+      0,
+      "MODEL"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.6830134553650707,
+      "offset": [
+        -903.3262644243058,
+        409.3868192966765
+      ]
+    },
+    "workflowRendererVersion": "LG",
+    "frontendVersion": "1.35.0",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
