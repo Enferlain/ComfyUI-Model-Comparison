@@ -148,6 +148,7 @@ class ModelComparisoner:
                     else:
                         batch_inds = latent_image.get("batch_index", None)
                         noise = comfy.sample.prepare_noise(work_latent, noise_seed, batch_inds)
+                    noise_for_model = noise
                 else:
                     if noise.shape != work_latent.shape:
                          if not add_noise:
@@ -166,7 +167,7 @@ class ModelComparisoner:
                 disable_pbar = not comfy.utils.PROGRESS_BAR_ENABLED
                 noise_mask = latent_image.get("noise_mask", None)
                 
-                samples = comfy.sample.sample_custom(model, noise_for_model, cfg, sampler, sigmas, positive, negative, work_latent, noise_mask=noise_mask, callback=callback, disable_pbar=disable_pbar, seed=noise_seed)
+                samples = comfy.sample.sample_custom(model, noise_for_model, cfg, sampler, sigmas.clone(), positive, negative, work_latent, noise_mask=noise_mask, callback=callback, disable_pbar=disable_pbar, seed=noise_seed)
                 
                 # Accumulate Latents
                 results_latents.append(samples)
